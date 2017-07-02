@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FlightNetwork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/" />
+
+    <link href="https://bootswatch.com/paper/bootstrap.css" rel="stylesheet" />
+    <link href="http://bootswatch.com/assets/css/custom.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <script type="text/javascript">
+        //prefixes of implementation that we want to test
+        window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+
+        //prefixes of window.IDB objects
+        window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+        window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
+
+        if (!window.indexedDB) {
+            window.alert("Your browser doesn't support a stable version of IndexedDB.")
+        }
+    </script>
+    <style>
+        .navbar-inverse .navbar-collapse,
+        .navbar-inverse .navbar-form {
+            border-color: #044a82;
+        }
+        
+        .navbar-inverse {
+            background-color: #044a82;
+            border-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <app-root>Loading...</app-root>
+</body>
+
+</html>

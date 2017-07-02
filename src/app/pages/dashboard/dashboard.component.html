@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-lg-8">
+        <input type="text" value="" class="form-control" placeholder="Search by title" [(ngModel)]="movie_title" />
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-lg-6" *ngFor="let movie of movielist | nameFilter:movie_title | paginate: { itemsPerPage:6, currentPage: p }">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default  panel--styled">
+                    <div class="panel-body">
+                        <div class="col-md-12 panelTop">
+                            <div class="col-lg-12">
+                                <span class="pull-right label label-warning">{{movie.title_year}}</span>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="http://placehold.it/350x350" alt="" />
+                            </div>
+                            <div class="col-md-8">
+                                <h4><a href="{{movie.movie_imdb_link}}" target="_blank">{{movie.movie_title}}</a></h4>
+                                <h6>Director : {{movie.director_name}}</h6>
+                                <h6>Actors : {{movie.actor_1_name + ", " + movie.actor_2_name}}</h6>
+                                <div [innerHtml]="movie.genres | genres"> </div>
+
+                            </div>
+                            <div class="col-lg-12">
+                                <a class="pull-right" href="{{movie.movie_imdb_link}}" target="_blank">View More Details ...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</div>

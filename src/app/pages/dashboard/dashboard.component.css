@@ -1,0 +1,11 @@
+.list-group a{
+    text-decoration: none;
+}
+
+.list-group .list-group-item:hover{
+    background: #eee;
+}
+
+.list-group .list-group-item {
+    margin: 10px 5px;
+}
