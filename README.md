@@ -1,5 +1,5 @@
 ## DEMO
-[https://flightnetwork.herokuapp.com/](https://flightnetwork.herokuapp.com/)
+[http://flightnetwork.herokuapp.com/](http://flightnetwork.herokuapp.com/)
 
 
 ## Angular4 Pipe Example 
